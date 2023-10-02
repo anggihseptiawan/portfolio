@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  transition: background-color 1s;
+}
+
+html[class="dark"] {
+  @apply bg-slate-900 text-white;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+main.homepage img,
+main.projects img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+html[class="dark"] img[src="/nextjs.svg"],
+html[class="dark"] img[src="/remix.svg"],
+html[class="dark"] img[alt*="-icon"] {
+  filter: invert(1);
+}
