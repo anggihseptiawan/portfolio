@@ -14,6 +14,10 @@ export const Navbar = () => {
     setDarkMode()
   }
 
+  function getActiveClass(theme: ThemeOption) {
+    return `${selectedTheme === theme ? "bg-green-100 dark:bg-slate-800" : ""}`
+  }
+
   useEffect(() => {
     if ("theme" in localStorage) {
       setSelectedTheme(localStorage.getItem("theme") as ThemeOption)
@@ -43,27 +47,27 @@ export const Navbar = () => {
         {isThemeOpen && (
           <div className="absolute w-52 overflow-hidden rounded-md border-2 border-emerald-400 right-0">
             <button
-              className={`${
-                selectedTheme === "light" ? "bg-green-100" : ""
-              } flex w-full px-4 py-2 gap-2 hover:bg-green-100 dark:hover:bg-slate-800`}
+              className={`${getActiveClass(
+                "light"
+              )} flex w-full px-4 py-2 gap-2 hover:bg-green-100 dark:hover:bg-slate-800`}
               onClick={() => setTheme("light")}
             >
               <img src="/sun.svg" alt="light-mode-icon" />
               <p>Light</p>
             </button>
             <button
-              className={`${
-                selectedTheme === "dark" ? "bg-green-100" : ""
-              } flex w-full px-4 py-2 gap-2 hover:bg-green-100 dark:hover:bg-slate-800`}
+              className={`${getActiveClass(
+                "dark"
+              )} flex w-full px-4 py-2 gap-2 hover:bg-green-100 dark:hover:bg-slate-800`}
               onClick={() => setTheme("dark")}
             >
               <img src="/moon.svg" alt="dark-mode-icon" />
               <p>Dark</p>
             </button>
             <button
-              className={`${
-                selectedTheme === "system" ? "bg-green-100" : ""
-              } flex w-full px-4 py-2 gap-2 hover:bg-green-100 dark:hover:bg-slate-800`}
+              className={`${getActiveClass(
+                "system"
+              )} flex w-full px-4 py-2 gap-2 hover:bg-green-100 dark:hover:bg-slate-800`}
               onClick={() => setTheme("system")}
             >
               <img src="/monitor.svg" alt="system-mode-icon" />
