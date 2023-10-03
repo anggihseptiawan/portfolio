@@ -1,4 +1,12 @@
-export function setDarkMode() {
+export function setDarkMode(isWithoutTransition?: boolean) {
+  if (isWithoutTransition) {
+    document.documentElement.style.transition = "none"
+  } else {
+    if (document.documentElement.hasAttribute("style")) {
+      document.documentElement.removeAttribute("style")
+    }
+  }
+
   if (!("theme" in localStorage) || localStorage.theme === "system") {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       document.documentElement.classList.add("dark")

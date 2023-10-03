@@ -5,7 +5,7 @@ import { RouterProvider } from "react-router-dom"
 import { router } from "./router/index"
 import { setDarkMode } from "./utils/setDarkMode"
 
-setDarkMode()
+setDarkMode(true)
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
