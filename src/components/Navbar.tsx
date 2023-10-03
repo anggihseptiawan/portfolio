@@ -73,7 +73,7 @@ export const Navbar = () => {
           <img src="/sun.svg" alt="sun-icon" />
         </button>
         {isSwitchThemeOpen && (
-          <div className="absolute w-52 overflow-hidden rounded-md border-2 border-emerald-400 right-0">
+          <div className="absolute w-52 overflow-hidden rounded-md border-2 border-emerald-400 right-0 bg-white dark:bg-slate-900">
             <button
               className={`${getActiveClass(
                 "light"
