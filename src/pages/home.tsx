@@ -5,7 +5,7 @@ const Home = () => (
         <small className="flex items-center bg-emerald-500 text-white rounded-sm px-2">
           Availability
         </small>
-        <small>I am now open for a new opportunity</small>
+        <small>I am currently open for a new opportunity</small>
       </div>
       <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-6">
         A Seasoned{" "}
