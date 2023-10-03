@@ -16,7 +16,11 @@ const Projects = () => (
         />
         <p>
           A landing page designed by{" "}
-          <a target="_blank" href="https://www.frontendmentor.io/">
+          <a
+            target="_blank"
+            rel="noopener noreferer"
+            href="https://www.frontendmentor.io/"
+          >
             Frontend Mentor
           </a>
         </p>
@@ -25,6 +29,7 @@ const Projects = () => (
           href="https://meetface.vercel.app/"
           className="flex gap-1 items-center"
           target="_blank"
+          rel="noopener noreferer"
         >
           <span>See it live</span>
           <img
@@ -42,7 +47,11 @@ const Projects = () => (
         />
         <p>
           A landing page for coffee shop designed by{" "}
-          <a target="_blank" href="https://www.frontendmentor.io/">
+          <a
+            target="_blank"
+            rel="noopener noreferer"
+            href="https://www.frontendmentor.io/"
+          >
             Frontend Mentor
           </a>
         </p>
@@ -51,6 +60,7 @@ const Projects = () => (
           href="https://roastedcoffee.vercel.app/"
           className="flex gap-1 items-center"
           target="_blank"
+          rel="noopener noreferer"
         >
           <span>See it live</span>
           <img
@@ -72,6 +82,7 @@ const Projects = () => (
           href="https://clothing-shop.vercel.app/"
           className="flex gap-1 items-center"
           target="_blank"
+          rel="noopener noreferer"
         >
           <span>See it live</span>
           <img
@@ -93,6 +104,7 @@ const Projects = () => (
           href="https://wild-monster.vercel.app/"
           className="flex gap-1 items-center"
           target="_blank"
+          rel="noopener noreferer"
         >
           <span>See it live</span>
           <img
@@ -114,6 +126,7 @@ const Projects = () => (
           href="https://kabarsukabumi.com/"
           className="flex gap-1 items-center"
           target="_blank"
+          rel="noopener noreferer"
         >
           <span>See it live</span>
           <img

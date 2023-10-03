@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { setDarkMode } from "../utils/setDarkMode"
 
 type ThemeOption = "system" | "light" | "dark"
 
 export const Navbar = () => {
-  const [isThemeOpen, setIsThemeOpen] = useState(false)
+  const [isSwitchThemeOpen, setIsSwitchThemeOpen] = useState(false)
   const [selectedTheme, setSelectedTheme] = useState<ThemeOption>("system")
 
-  const setTheme = (theme: "light" | "dark" | "system") => {
-    setIsThemeOpen(false)
+  const setTheme = (theme: ThemeOption) => {
+    setIsSwitchThemeOpen(false)
     localStorage.setItem("theme", theme)
     setDarkMode()
   }
@@ -27,24 +27,52 @@ export const Navbar = () => {
   return (
     <div className="flex justify-between py-5">
       <nav className="flex gap-4 sm:gap-10">
-        <Link to="/" className="font-semibold tracking-tight">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `font-semibold tracking-tight ${
+              isActive ? "text-emerald-500 dark:text-emerald-300 " : ""
+            }`
+          }
+        >
           Home
-        </Link>
-        <Link to="/about" className="font-semibold tracking-tight">
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            `font-semibold tracking-tight ${
+              isActive ? "text-emerald-500 dark:text-emerald-300 " : ""
+            }`
+          }
+        >
           About
-        </Link>
-        <Link to="/projects" className="font-semibold tracking-tight">
+        </NavLink>
+        <NavLink
+          to="/projects"
+          className={({ isActive }) =>
+            `font-semibold tracking-tight ${
+              isActive ? "text-emerald-500 dark:text-emerald-300 " : ""
+            }`
+          }
+        >
           Projects
-        </Link>
-        <Link to="/posts" className="font-semibold tracking-tight">
+        </NavLink>
+        <NavLink
+          to="/posts"
+          className={({ isActive }) =>
+            `font-semibold tracking-tight ${
+              isActive ? "text-emerald-500 dark:text-emerald-300 " : ""
+            }`
+          }
+        >
           Posts
-        </Link>
+        </NavLink>
       </nav>
       <div className="relative">
-        <button onClick={() => setIsThemeOpen(!isThemeOpen)}>
+        <button onClick={() => setIsSwitchThemeOpen(!isSwitchThemeOpen)}>
           <img src="/sun.svg" alt="sun-icon" />
         </button>
-        {isThemeOpen && (
+        {isSwitchThemeOpen && (
           <div className="absolute w-52 overflow-hidden rounded-md border-2 border-emerald-400 right-0">
             <button
               className={`${getActiveClass(
