@@ -19,23 +19,21 @@ const Home = () => (
         web development, proficient in React and TypeScript. Connect with me to
         talk more about web, and how we can create meaningful products.
       </p>
-      <div className="flex gap-4 sm:gap-6 flex-col sm:flex-row py-4">
-        <div className="flex gap-4 sm:gap-6">
-          <a
-            href="https://www.linkedin.com/in/anggihseptiawan/"
-            target="_blank"
-            rel="noopener noreferer"
-          >
-            <img src="/linkedin-icon.svg" className="w-6" alt="linkedin" />
-          </a>
-          <a
-            href="https://github.com/anggihseptiawan"
-            target="_blank"
-            rel="noopener noreferer"
-          >
-            <img src="/github-icon.svg" className="w-6" alt="github-icon" />
-          </a>
-        </div>
+      <div className="flex gap-4 sm:gap-6 py-4">
+        <a
+          href="https://www.linkedin.com/in/anggihseptiawan/"
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          <img src="/linkedin-icon.svg" className="w-6" alt="linkedin" />
+        </a>
+        <a
+          href="https://github.com/anggihseptiawan"
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          <img src="/github-icon.svg" className="w-6" alt="github-icon" />
+        </a>
         <div className="flex gap-2">
           <img src="/gmail-icon.svg" className="w-6" alt="mail" />
           <span>anggihseptiawan@gmail.com</span>
