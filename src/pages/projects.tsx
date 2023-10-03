@@ -15,11 +15,12 @@ const Projects = () => (
           alt="project-1"
         />
         <p>
-          A landing page designed by{" "}
+          A simple landing page designed by{" "}
           <a
-            target="_blank"
-            rel="noopener noreferer"
             href="https://www.frontendmentor.io/"
+            target="_blank"
+            className="text-emerald-500 dark:text-emerald-300"
+            rel="noopener noreferer"
           >
             Frontend Mentor
           </a>
@@ -46,11 +47,12 @@ const Projects = () => (
           alt="project-2"
         />
         <p>
-          A landing page for coffee shop designed by{" "}
+          Another simple landing page designed by{" "}
           <a
+            href="https://www.frontendmentor.io/"
             target="_blank"
             rel="noopener noreferer"
-            href="https://www.frontendmentor.io/"
+            className="text-emerald-500 dark:text-emerald-300"
           >
             Frontend Mentor
           </a>
