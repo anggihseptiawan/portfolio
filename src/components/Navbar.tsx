@@ -20,6 +20,12 @@ export const Navbar = () => {
     } flex w-full px-4 py-2 gap-2 hover:bg-green-100 dark:hover:bg-slate-800`
   }
 
+  function getActiveClassNav(isActive: boolean) {
+    return `font-semibold tracking-tight ${
+      isActive ? "text-emerald-500 dark:text-emerald-300 " : ""
+    }`
+  }
+
   useEffect(() => {
     if ("theme" in localStorage) {
       setSelectedTheme(localStorage.getItem("theme") as ThemeOption)
@@ -31,41 +37,25 @@ export const Navbar = () => {
       <nav className="flex gap-4 sm:gap-10">
         <NavLink
           to="/"
-          className={({ isActive }) =>
-            `font-semibold tracking-tight ${
-              isActive ? "text-emerald-500 dark:text-emerald-300 " : ""
-            }`
-          }
+          className={({ isActive }) => getActiveClassNav(isActive)}
         >
           Home
         </NavLink>
         <NavLink
           to="/about"
-          className={({ isActive }) =>
-            `font-semibold tracking-tight ${
-              isActive ? "text-emerald-500 dark:text-emerald-300 " : ""
-            }`
-          }
+          className={({ isActive }) => getActiveClassNav(isActive)}
         >
           About
         </NavLink>
         <NavLink
           to="/projects"
-          className={({ isActive }) =>
-            `font-semibold tracking-tight ${
-              isActive ? "text-emerald-500 dark:text-emerald-300 " : ""
-            }`
-          }
+          className={({ isActive }) => getActiveClassNav(isActive)}
         >
           Projects
         </NavLink>
         <NavLink
           to="/posts"
-          className={({ isActive }) =>
-            `font-semibold tracking-tight ${
-              isActive ? "text-emerald-500 dark:text-emerald-300 " : ""
-            }`
-          }
+          className={({ isActive }) => getActiveClassNav(isActive)}
         >
           Posts
         </NavLink>

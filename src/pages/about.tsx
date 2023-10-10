@@ -2,12 +2,14 @@ function About() {
   return (
     <main className="sm:py-8">
       <section className="flex flex-col sm:flex-row gap-6 mb-10">
-        <img
-          src="/profile.png"
-          className="rounded-md sm:w-1/3"
-          alt="profile-image"
-        />
-        <div>
+        <div className="sm:w-1/3">
+          <img
+            src="/profile.png"
+            className="rounded-md w-full"
+            alt="profile-image"
+          />
+        </div>
+        <div className="sm:w-2/3">
           <h3 className="text-2xl font-semibold tracking-tight mb-3">
             Hey there 👋, I am Anggih Septiawan, and here is my little story 🙌
           </h3>

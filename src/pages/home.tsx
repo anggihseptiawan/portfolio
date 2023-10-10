@@ -6,9 +6,6 @@ import { Post } from "../types/post"
 const Home = () => {
   const { loading, error, data } = useQuery(GET_POST)
 
-  if (loading) return <p>loading..</p>
-  if (error) return <p>Couldn't get blog post</p>
-
   return (
     <>
       <header className="sm:py-16">
@@ -93,22 +90,25 @@ const Home = () => {
           <p>Here are the latest post I made.</p>
 
           <div className="grid sm:grid-cols-3 gap-4 py-4">
-            {data.posts.map((post: Post) => (
-              <div key={post.slug} className="mb-3">
-                <img
-                  src={post.thumbnail.url}
-                  className="w-full rounded-md mb-2"
-                  alt={post.slug}
-                />
-                <Link
-                  to={"/post/" + post.slug}
-                  className="text-lg font-semibold block mb-2"
-                >
-                  {post.title}
-                </Link>
-                <p className="description">{post.description}</p>
-              </div>
-            ))}
+            {loading && <p>loading..</p>}
+            {error && <p>Couldn't get blog post</p>}
+            {data &&
+              data.posts.map((post: Post) => (
+                <div key={post.slug} className="mb-3">
+                  <img
+                    src={post.thumbnail.url}
+                    className="w-full rounded-md mb-2"
+                    alt={post.slug}
+                  />
+                  <Link
+                    to={"/post/" + post.slug}
+                    className="text-lg font-semibold block mb-2"
+                  >
+                    {post.title}
+                  </Link>
+                  <p className="description">{post.description}</p>
+                </div>
+              ))}
           </div>
         </section>
       </main>
