@@ -21,7 +21,9 @@ main.projects img {
   object-fit: cover;
 }
 
-main.post .content p {
+main.post .content p,
+main.post .content ul,
+main.post .content ol {
   margin-bottom: 20px;
 }
 
@@ -30,8 +32,8 @@ main.post .content h2 {
   font-size: 23px;
 }
 
-main.post .content pre {
-  @apply bg-slate-200 py-3 px-6 rounded-md mb-3;
+main.post .content pre code {
+  @apply rounded-md mb-3;
 }
 
 html[class="dark"] img[src="/nextjs.svg"],
@@ -45,4 +47,73 @@ section.post p.description {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* CODE HIGHLIGHT */
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+code.hljs {
+  padding: 3px 5px;
+}
+.hljs {
+  @apply bg-indigo-950 text-purple-400;
+}
+.hljs-comment {
+  @apply text-slate-400;
+}
+.hljs-punctuation,
+.hljs-tag {
+  @apply text-emerald-300;
+}
+.hljs-tag .hljs-attr,
+.hljs-tag .hljs-name {
+  @apply text-emerald-200;
+}
+.hljs-deletion,
+.hljs-number,
+.hljs-quote,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-string,
+.hljs-template-tag,
+.hljs-type {
+  @apply text-sky-500;
+}
+.hljs-section,
+.hljs-title {
+  @apply text-cyan-500;
+}
+.hljs-link,
+.hljs-operator,
+.hljs-regexp,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-symbol,
+.hljs-template-variable,
+.hljs-variable {
+  @apply text-emerald-300;
+}
+.hljs-literal {
+  @apply text-emerald-400;
+}
+.hljs-addition,
+.hljs-built_in,
+.hljs-bullet,
+.hljs-code {
+  color: #397300;
+}
+.hljs-meta {
+  color: #1f7199;
+}
+.hljs-meta .hljs-string {
+  color: #38a;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+code:not(.hljs) {
+  @apply bg-slate-300 dark:bg-slate-500 px-1 rounded-sm;
 }

@@ -1,6 +1,8 @@
 import { useQuery } from "@apollo/client"
 import { useParams } from "react-router-dom"
 import { GET_DETAIL_POST } from "../../constants/query"
+import MarkDown from "react-markdown"
+import rehypeHighlight from "rehype-highlight"
 
 export default function Post() {
   const { slug } = useParams()
@@ -23,10 +25,9 @@ export default function Post() {
         className="w-full sm:h-[450px] object-cover rounded-md mb-6"
         alt={data.post.slug}
       />
-      <div
-        className="content"
-        dangerouslySetInnerHTML={{ __html: data.post.content.html }}
-      />
+      <MarkDown className="content" rehypePlugins={[rehypeHighlight]}>
+        {data.post.content.markdown.replaceAll("\\", "")}
+      </MarkDown>
     </main>
   )
 }

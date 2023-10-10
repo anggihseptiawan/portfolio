@@ -19,7 +19,7 @@ export const GET_DETAIL_POST = gql`
       slug
       title
       content {
-        html
+        markdown
       }
       thumbnail {
         url
