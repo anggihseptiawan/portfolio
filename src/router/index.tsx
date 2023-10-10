@@ -4,6 +4,7 @@ import Home from "../pages/home"
 import About from "../pages/about"
 import Projects from "../pages/projects"
 import Posts from "../pages/posts"
+import Post from "../pages/post"
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: "/posts",
         element: <Posts />,
+      },
+      {
+        path: "/post/:slug",
+        element: <Post />,
       },
     ],
   },

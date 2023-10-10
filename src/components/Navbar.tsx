@@ -15,7 +15,9 @@ export const Navbar = () => {
   }
 
   function getActiveClass(theme: ThemeOption) {
-    return `${selectedTheme === theme ? "bg-green-100 dark:bg-slate-800" : ""}`
+    return `${
+      selectedTheme === theme ? "bg-green-100 dark:bg-slate-800" : ""
+    } flex w-full px-4 py-2 gap-2 hover:bg-green-100 dark:hover:bg-slate-800`
   }
 
   useEffect(() => {
@@ -75,27 +77,21 @@ export const Navbar = () => {
         {isSwitchThemeOpen && (
           <div className="absolute w-52 overflow-hidden rounded-md border-2 border-emerald-400 right-0 bg-white dark:bg-slate-900">
             <button
-              className={`${getActiveClass(
-                "light"
-              )} flex w-full px-4 py-2 gap-2 hover:bg-green-100 dark:hover:bg-slate-800`}
+              className={getActiveClass("light")}
               onClick={() => setTheme("light")}
             >
               <img src="/sun.svg" alt="light-mode-icon" />
               <p>Light</p>
             </button>
             <button
-              className={`${getActiveClass(
-                "dark"
-              )} flex w-full px-4 py-2 gap-2 hover:bg-green-100 dark:hover:bg-slate-800`}
+              className={getActiveClass("dark")}
               onClick={() => setTheme("dark")}
             >
               <img src="/moon.svg" alt="dark-mode-icon" />
               <p>Dark</p>
             </button>
             <button
-              className={`${getActiveClass(
-                "system"
-              )} flex w-full px-4 py-2 gap-2 hover:bg-green-100 dark:hover:bg-slate-800`}
+              className={getActiveClass("system")}
               onClick={() => setTheme("system")}
             >
               <img src="/monitor.svg" alt="system-mode-icon" />

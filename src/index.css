@@ -21,8 +21,28 @@ main.projects img {
   object-fit: cover;
 }
 
+main.post .content p {
+  margin-bottom: 20px;
+}
+
+main.post .content h2 {
+  font-weight: bold;
+  font-size: 23px;
+}
+
+main.post .content pre {
+  @apply bg-slate-200 py-3 px-6 rounded-md mb-3;
+}
+
 html[class="dark"] img[src="/nextjs.svg"],
 html[class="dark"] img[src="/remix.svg"],
 html[class="dark"] img[alt*="-icon"] {
   filter: invert(1);
+}
+
+section.post p.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
