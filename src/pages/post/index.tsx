@@ -16,7 +16,7 @@ export default function Post() {
   if (error) return <p>Couldn't get blog detail</p>
 
   return (
-    <main className="post sm:py-8">
+    <main className="post sm:py-8 sm:px-24">
       <h1 className="text-3xl text-center font-bold tracking-tight mb-4">
         {data.post.title}
       </h1>
