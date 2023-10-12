@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { NavLink } from "react-router-dom"
-import { setDarkMode } from "../utils/setDarkMode"
+import { setTheme } from "../utils/setTheme"
 
 type ThemeOption = "system" | "light" | "dark"
 
@@ -8,10 +8,10 @@ export const Navbar = () => {
   const [isSwitchThemeOpen, setIsSwitchThemeOpen] = useState(false)
   const [selectedTheme, setSelectedTheme] = useState<ThemeOption>("system")
 
-  const setTheme = (theme: ThemeOption) => {
+  const switchTheme = (theme: ThemeOption) => {
     setIsSwitchThemeOpen(false)
     localStorage.setItem("theme", theme)
-    setDarkMode()
+    setTheme()
   }
 
   function getActiveClass(theme: ThemeOption) {
@@ -21,9 +21,9 @@ export const Navbar = () => {
   }
 
   function getActiveClassNav(isActive: boolean) {
-    return `font-semibold tracking-tight ${
+    return `${
       isActive ? "text-emerald-500 dark:text-emerald-300 " : ""
-    }`
+    } font-semibold tracking-tight`
   }
 
   function renderSwitchThemeIcon() {
@@ -83,21 +83,21 @@ export const Navbar = () => {
           <div className="absolute w-52 overflow-hidden rounded-md border-2 border-emerald-400 right-0 bg-white dark:bg-slate-900">
             <button
               className={getActiveClass("light")}
-              onClick={() => setTheme("light")}
+              onClick={() => switchTheme("light")}
             >
               <img src="/sun.svg" alt="light-mode-icon" />
               <p>Light</p>
             </button>
             <button
               className={getActiveClass("dark")}
-              onClick={() => setTheme("dark")}
+              onClick={() => switchTheme("dark")}
             >
               <img src="/moon.svg" alt="dark-mode-icon" />
               <p>Dark</p>
             </button>
             <button
               className={getActiveClass("system")}
-              onClick={() => setTheme("system")}
+              onClick={() => switchTheme("system")}
             >
               <img src="/monitor.svg" alt="system-mode-icon" />
               <p>System</p>

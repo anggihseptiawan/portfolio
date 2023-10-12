@@ -1,4 +1,4 @@
-export function setDarkMode(isWithoutTransition?: boolean) {
+export function setTheme(isWithoutTransition?: boolean) {
   if (isWithoutTransition) {
     document.documentElement.style.transition = "none"
   } else {

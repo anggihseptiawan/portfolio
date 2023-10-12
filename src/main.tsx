@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client"
 import "./index.css"
 import { RouterProvider } from "react-router-dom"
 import { router } from "./router/index"
-import { setDarkMode } from "./utils/setDarkMode"
+import { setTheme } from "./utils/setTheme"
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client"
 
-setDarkMode(true)
+setTheme(true)
 
 const client = new ApolloClient({
   uri: import.meta.env.VITE_HYGRAPH_CMS,
