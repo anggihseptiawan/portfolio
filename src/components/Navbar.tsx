@@ -26,6 +26,23 @@ export const Navbar = () => {
     }`
   }
 
+  function renderSwitchThemeIcon() {
+    function renderImage() {
+      if (
+        selectedTheme === "dark" ||
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      )
+        return <img src="/moon.svg" alt="moon-icon" />
+      return <img src="/sun.svg" alt="sun-icon" />
+    }
+
+    return (
+      <button onClick={() => setIsSwitchThemeOpen(!isSwitchThemeOpen)}>
+        {renderImage()}
+      </button>
+    )
+  }
+
   useEffect(() => {
     if ("theme" in localStorage) {
       setSelectedTheme(localStorage.getItem("theme") as ThemeOption)
@@ -34,7 +51,7 @@ export const Navbar = () => {
 
   return (
     <div className="flex justify-between py-5">
-      <nav className="flex gap-4 sm:gap-10">
+      <nav className="flex gap-4 sm:gap-10 items-center">
         <NavLink
           to="/"
           className={({ isActive }) => getActiveClassNav(isActive)}
@@ -61,9 +78,7 @@ export const Navbar = () => {
         </NavLink>
       </nav>
       <div className="relative">
-        <button onClick={() => setIsSwitchThemeOpen(!isSwitchThemeOpen)}>
-          <img src="/sun.svg" alt="sun-icon" />
-        </button>
+        {renderSwitchThemeIcon()}
         {isSwitchThemeOpen && (
           <div className="absolute w-52 overflow-hidden rounded-md border-2 border-emerald-400 right-0 bg-white dark:bg-slate-900">
             <button
