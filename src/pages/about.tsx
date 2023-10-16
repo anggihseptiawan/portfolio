@@ -4,7 +4,7 @@ function About() {
       <section className="flex flex-col sm:flex-row gap-6 mb-10">
         <div className="sm:w-1/3">
           <img
-            src="/profile.png"
+            src={`${import.meta.env.VITE_HYGRAPH_ASSETS}LPm2RxmSKurpWCHMjtDM`}
             className="rounded-md w-full"
             alt="profile-image"
           />

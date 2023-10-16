@@ -32,8 +32,18 @@ export const Navbar = () => {
         selectedTheme === "dark" ||
         window.matchMedia("(prefers-color-scheme: dark)").matches
       )
-        return <img src="/moon.svg" alt="moon-icon" />
-      return <img src="/sun.svg" alt="sun-icon" />
+        return (
+          <img
+            src={import.meta.env.VITE_HYGRAPH_ASSETS + "UM7V3qPkRTCe2syEWJw3"}
+            alt="moon-icon"
+          />
+        )
+      return (
+        <img
+          src={import.meta.env.VITE_HYGRAPH_ASSETS + "plemDTYZRAyqQ42d7G1F"}
+          alt="sun-icon"
+        />
+      )
     }
 
     return (
@@ -85,21 +95,36 @@ export const Navbar = () => {
               className={getActiveClass("light")}
               onClick={() => switchTheme("light")}
             >
-              <img src="/sun.svg" alt="light-mode-icon" />
+              <img
+                src={
+                  import.meta.env.VITE_HYGRAPH_ASSETS + "plemDTYZRAyqQ42d7G1F"
+                }
+                alt="light-mode-icon"
+              />
               <p>Light</p>
             </button>
             <button
               className={getActiveClass("dark")}
               onClick={() => switchTheme("dark")}
             >
-              <img src="/moon.svg" alt="dark-mode-icon" />
+              <img
+                src={
+                  import.meta.env.VITE_HYGRAPH_ASSETS + "UM7V3qPkRTCe2syEWJw3"
+                }
+                alt="dark-mode-icon"
+              />
               <p>Dark</p>
             </button>
             <button
               className={getActiveClass("system")}
               onClick={() => switchTheme("system")}
             >
-              <img src="/monitor.svg" alt="system-mode-icon" />
+              <img
+                src={
+                  import.meta.env.VITE_HYGRAPH_ASSETS + "tnzfdPWvSsai15vIULWQ"
+                }
+                alt="system-mode-icon"
+              />
               <p>System</p>
             </button>
           </div>

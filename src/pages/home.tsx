@@ -33,17 +33,29 @@ const Home = () => {
             target="_blank"
             rel="noopener noreferer"
           >
-            <img src="/linkedin-icon.svg" className="w-6" alt="linkedin" />
+            <img
+              src={import.meta.env.VITE_HYGRAPH_ASSETS + "ODOj6BemRjKJhXc45BLx"}
+              className="w-6"
+              alt="linkedin"
+            />
           </a>
           <a
             href="https://github.com/anggihseptiawan"
             target="_blank"
             rel="noopener noreferer"
           >
-            <img src="/github-icon.svg" className="w-6" alt="github-icon" />
+            <img
+              src={import.meta.env.VITE_HYGRAPH_ASSETS + "n14i95PGRgi48RCNKIUK"}
+              className="w-6"
+              alt="github-icon"
+            />
           </a>
           <div className="flex gap-2">
-            <img src="/gmail-icon.svg" className="w-6" alt="mail" />
+            <img
+              src={import.meta.env.VITE_HYGRAPH_ASSETS + "wnMuNw6oQgubNW1XWLG7"}
+              className="w-6"
+              alt="mail"
+            />
             <span>anggihseptiawan@gmail.com</span>
           </div>
         </div>
@@ -62,7 +74,12 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferer"
             >
-              <img src="/project1.png" alt="meetface" />
+              <img
+                src={
+                  import.meta.env.VITE_HYGRAPH_ASSETS + "O0PAOiQqCf8svcGPPYQE"
+                }
+                alt="meetface"
+              />
             </a>
             <a
               href="https://roastedcoffee.vercel.app/"
@@ -70,7 +87,12 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferer"
             >
-              <img src="/project2.png" alt="meetface" />
+              <img
+                src={
+                  import.meta.env.VITE_HYGRAPH_ASSETS + "KJ9ytltSSanfUPkzHWcA"
+                }
+                alt="coffee-shop"
+              />
             </a>
             <a
               href="https://clothing-shop.vercel.app/"
@@ -78,7 +100,12 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferer"
             >
-              <img src="/project3.png" alt="meetface" />
+              <img
+                src={
+                  import.meta.env.VITE_HYGRAPH_ASSETS + "kWsDvTTQ1aWf1DJHwqMG"
+                }
+                alt="commerce"
+              />
             </a>
           </div>
         </section>

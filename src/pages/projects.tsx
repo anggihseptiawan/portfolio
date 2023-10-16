@@ -10,7 +10,7 @@ const Projects = () => (
     <section className="grid sm:grid-cols-2 gap-4 py-8">
       <div>
         <img
-          src="/project1.png"
+          src={import.meta.env.VITE_HYGRAPH_ASSETS + "O0PAOiQqCf8svcGPPYQE"}
           className="rounded-md mb-2 border-4 border-emerald-400"
           alt="project-1"
         />
@@ -42,7 +42,7 @@ const Projects = () => (
       </div>
       <div>
         <img
-          src="/project2.png"
+          src={import.meta.env.VITE_HYGRAPH_ASSETS + "KJ9ytltSSanfUPkzHWcA"}
           className="rounded-md mb-2 border-4 border-emerald-400"
           alt="project-2"
         />
@@ -74,7 +74,7 @@ const Projects = () => (
       </div>
       <div>
         <img
-          src="/project3.png"
+          src={import.meta.env.VITE_HYGRAPH_ASSETS + "kWsDvTTQ1aWf1DJHwqMG"}
           className="rounded-md mb-2 border-4 border-emerald-400"
           alt=""
         />
@@ -96,7 +96,7 @@ const Projects = () => (
       </div>
       <div>
         <img
-          src="/project4.png"
+          src={import.meta.env.VITE_HYGRAPH_ASSETS + "PWsRqVtoRpyP36p4g5Eu"}
           className="rounded-md mb-2 border-4 border-emerald-400"
           alt=""
         />
@@ -118,7 +118,7 @@ const Projects = () => (
       </div>
       <div>
         <img
-          src="/project5.png"
+          src={import.meta.env.VITE_HYGRAPH_ASSETS + "7ODAlSg4SgaFkyIjeYYx"}
           className="rounded-md mb-2 border-4 border-emerald-400"
           alt=""
         />
@@ -140,7 +140,7 @@ const Projects = () => (
       </div>
       <div>
         <img
-          src="/project6.png"
+          src={import.meta.env.VITE_HYGRAPH_ASSETS + "yEEQSjYQT1yU13jrFpyE"}
           className="rounded-md mb-2 border-4 border-emerald-400"
           alt=""
         />
