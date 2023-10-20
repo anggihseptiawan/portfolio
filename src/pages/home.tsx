@@ -69,16 +69,16 @@ const Home = () => {
           <p>Here are some of the projects I build.</p>
           <div className="grid sm:grid-cols-3 gap-3 py-3">
             <a
-              href="https://meetface.vercel.app/"
+              href="https://flexpdf.vercel.app/"
               className="rounded-md border-4 border-emerald-400"
               target="_blank"
               rel="noopener noreferer"
             >
               <img
                 src={
-                  import.meta.env.VITE_HYGRAPH_ASSETS + "O0PAOiQqCf8svcGPPYQE"
+                  import.meta.env.VITE_HYGRAPH_ASSETS + "pEsD5EWTbenFfZRjuQBQ"
                 }
-                alt="meetface"
+                alt="flexpdf"
               />
             </a>
             <a
