@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <>
-      <header className="sm:py-16">
+      <header className="py-8 sm:py-20">
         {/* <div className="inline-flex p-1 rounded-[3px] gap-2 mb-2 border border-emerald-500">
           <small className="flex items-center bg-emerald-500 text-white rounded-sm px-2">
             Availability

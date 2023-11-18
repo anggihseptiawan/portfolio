@@ -13,14 +13,14 @@ function About() {
           <h3 className="text-2xl font-semibold tracking-tight mb-3">
             Hey there 👋, I am Anggih Septiawan, and here is my little story 🙌
           </h3>
-          <p className="mb-2">
+          <p className="mb-2 text-justify">
             Welcome to my digital journey, where I transformed from a bewildered
             college student to a passionate web developer. In 2017, I ventured
             into the world of programming with Java, but my interest only truly
             sparked during my third semester when I discovered HTML and CSS.
             This marked the beginning of my journey into web development.
           </p>
-          <p className="mb-2">
+          <p className="mb-2 text-justify">
             In 2019, I took my first step into the professional world as a web
             developer. My initial project was a company profile built using PHP
             and WordPress. However, my fascination for Frontend Development grew
@@ -28,13 +28,13 @@ function About() {
             and user-friendly interfaces with React.js, along with frameworks
             like Next.js and Remix, complemented by TypeScript.
           </p>
-          <p className="mb-2">
+          <p className="mb-2 text-justify">
             Beyond web development, I explored mobile and desktop app
             development using React Native and Electron, broadening my skill
             set. The rapidly evolving technology landscape continues to excite
             me, motivating me to create beautiful and meaningful products.
           </p>
-          <p className="mb-2">
+          <p className="mb-2 text-justify">
             I invite you to join me on this journey where innovation knows no
             bounds, creativity thrives, and every day offers new opportunities
             to build exceptional digital experiences.
@@ -61,7 +61,7 @@ function About() {
                   </p>
                 </div>
 
-                <ul className="list-inside">
+                <ul className="list-outside pl-4">
                   <li className="list-disc">
                     Code refactor, reduce the code of an apps by ~10% and makes
                     the code more concise, easy to maintain and scalable
@@ -95,7 +95,7 @@ function About() {
                   </p>
                 </div>
 
-                <ul className="list-inside">
+                <ul className="list-outside pl-4">
                   <li className="list-disc">
                     Migrate some web apps from Laravel to React Js
                   </li>
@@ -135,7 +135,7 @@ function About() {
                     <span> [Feb 2020 - Nov 2020]</span>
                   </p>
                 </div>
-                <ul className="list-inside">
+                <ul className="list-outside pl-4">
                   <li className="list-disc">
                     Build an internal company profile
                   </li>
@@ -157,7 +157,7 @@ function About() {
                     Jagonya Bisnis - <span> [July 2019 - Dec 2019]</span>
                   </p>
                 </div>
-                <ul className="list-inside">
+                <ul className="list-outside pl-4">
                   <li className="list-disc">
                     Build several websites for the governments
                   </li>
