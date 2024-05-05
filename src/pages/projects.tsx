@@ -10,6 +10,50 @@ const Projects = () => (
     <section className="grid sm:grid-cols-2 gap-4 py-8">
       <div>
         <img
+          src={import.meta.env.VITE_HYGRAPH_ASSETS + "y4Gf8GsFSuAmdkUxc5mg"}
+          className="rounded-md mb-2 border-4 border-emerald-400"
+          alt="flex-pdf"
+        />
+        <p>A minimal beautifully design screen saver for your desktop</p>
+        <p className="mb-3">Build with: React, TypeScript & Tailwind</p>
+        <a
+          href="https://screensavior.vercel.app/"
+          className="flex gap-1 items-center font-semibold text-emerald-500 dark:text-emerald-300"
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          <span>See it live</span>
+          <img
+            src="/external-link.svg"
+            className="w-4 h-4"
+            alt="external-link"
+          />
+        </a>
+      </div>
+      <div>
+        <img
+          src={import.meta.env.VITE_HYGRAPH_ASSETS + "bTFlBlceRWuyU5zx1d9Q"}
+          className="rounded-md mb-2 border-4 border-emerald-400"
+          alt="flex-pdf"
+        />
+        <p>Base64 Decoder and Encoder for your image</p>
+        <p className="mb-3">Build with: Solid, TypeScript & Tailwind</p>
+        <a
+          href="https://base64-to-image.vercel.app/"
+          className="flex gap-1 items-center font-semibold text-emerald-500 dark:text-emerald-300"
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          <span>See it live</span>
+          <img
+            src="/external-link.svg"
+            className="w-4 h-4"
+            alt="external-link"
+          />
+        </a>
+      </div>
+      <div>
+        <img
           src={import.meta.env.VITE_HYGRAPH_ASSETS + "pEsD5EWTbenFfZRjuQBQ"}
           className="rounded-md mb-2 border-4 border-emerald-400"
           alt="flex-pdf"

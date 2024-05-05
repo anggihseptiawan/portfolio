@@ -20,7 +20,7 @@ const Home = () => {
           <span className="text-emerald-500 dark:text-emerald-300">
             Frontend Engineer
           </span>{" "}
-          <br /> Based on Tegal, Indonesia.
+          <br /> Based on Jakarta, Indonesia.
         </h1>
         <p className="sm:w-1/2 mb-2">
           I am Anggih Septiawan, Frontend Engineer with 4 years of expertise in
@@ -69,6 +69,32 @@ const Home = () => {
           <p>Here are some of the projects I build.</p>
           <div className="grid sm:grid-cols-3 gap-3 py-3">
             <a
+              href="https://screensavior.vercel.app/"
+              className="rounded-md border-4 border-emerald-400"
+              target="_blank"
+              rel="noopener noreferer"
+            >
+              <img
+                src={
+                  import.meta.env.VITE_HYGRAPH_ASSETS + "y4Gf8GsFSuAmdkUxc5mg"
+                }
+                alt="screensavior"
+              />
+            </a>
+            <a
+              href="https://base64-to-image.vercel.app/"
+              className="rounded-md border-4 border-emerald-400"
+              target="_blank"
+              rel="noopener noreferer"
+            >
+              <img
+                src={
+                  import.meta.env.VITE_HYGRAPH_ASSETS + "bTFlBlceRWuyU5zx1d9Q"
+                }
+                alt="base64decoder"
+              />
+            </a>
+            <a
               href="https://flexpdf.vercel.app/"
               className="rounded-md border-4 border-emerald-400"
               target="_blank"
@@ -79,32 +105,6 @@ const Home = () => {
                   import.meta.env.VITE_HYGRAPH_ASSETS + "pEsD5EWTbenFfZRjuQBQ"
                 }
                 alt="flexpdf"
-              />
-            </a>
-            <a
-              href="https://roastedcoffee.vercel.app/"
-              className="rounded-md border-4 border-emerald-400"
-              target="_blank"
-              rel="noopener noreferer"
-            >
-              <img
-                src={
-                  import.meta.env.VITE_HYGRAPH_ASSETS + "KJ9ytltSSanfUPkzHWcA"
-                }
-                alt="coffee-shop"
-              />
-            </a>
-            <a
-              href="https://clothing-shop.vercel.app/"
-              className="rounded-md border-4 border-emerald-400"
-              target="_blank"
-              rel="noopener noreferer"
-            >
-              <img
-                src={
-                  import.meta.env.VITE_HYGRAPH_ASSETS + "kWsDvTTQ1aWf1DJHwqMG"
-                }
-                alt="commerce"
               />
             </a>
           </div>
