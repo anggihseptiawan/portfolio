@@ -89,7 +89,7 @@ const Home = () => {
             >
               <img
                 src={
-                  import.meta.env.VITE_HYGRAPH_ASSETS + "bTFlBlceRWuyU5zx1d9Q"
+                  import.meta.env.VITE_HYGRAPH_ASSETS + "hvRKWbSiTMWrZss0SM9n"
                 }
                 alt="base64decoder"
               />

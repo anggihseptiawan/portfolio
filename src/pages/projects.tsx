@@ -32,7 +32,7 @@ const Projects = () => (
       </div>
       <div>
         <img
-          src={import.meta.env.VITE_HYGRAPH_ASSETS + "bTFlBlceRWuyU5zx1d9Q"}
+          src={import.meta.env.VITE_HYGRAPH_ASSETS + "hvRKWbSiTMWrZss0SM9n"}
           className="rounded-md mb-2 border-4 border-emerald-400"
           alt="flex-pdf"
         />
