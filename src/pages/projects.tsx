@@ -207,15 +207,6 @@ const Projects = () => (
           />
         </a>
       </div>
-      <div>
-        <img
-          src={import.meta.env.VITE_HYGRAPH_ASSETS + "yEEQSjYQT1yU13jrFpyE"}
-          className="rounded-md mb-2 border-4 border-emerald-400"
-          alt=""
-        />
-        <p>Official website for Lenovo Legion back in 2019</p>
-        <p className="mb-3">Build with: Laravel, Bootstrap, & Slick Js</p>
-      </div>
     </section>
   </main>
 )

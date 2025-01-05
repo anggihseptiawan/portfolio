@@ -21,12 +21,12 @@ function About() {
             This marked the beginning of my journey into web development.
           </p>
           <p className="mb-2 text-justify">
-            In 2019, I took my first step into the professional world as a web
-            developer. My initial project was a company profile built using PHP
-            and WordPress. However, my fascination for Frontend Development grew
-            stronger, leading me to specialize in crafting visually appealing
-            and user-friendly interfaces with React.js, along with frameworks
-            like Next.js and Remix, complemented by TypeScript.
+            In 2020, I took my first step into the professional world as a web
+            developer. My initial project was a company profile built using PHP.
+            However, my fascination for Frontend Development grew stronger,
+            leading me to specialize in crafting visually appealing and
+            user-friendly interfaces with React.js, along with frameworks like
+            Next.js and Remix, complemented by TypeScript.
           </p>
           <p className="mb-2 text-justify">
             Beyond web development, I explored mobile and desktop app
@@ -144,33 +144,6 @@ function About() {
                   </li>
                   <li className="list-disc">
                     Teaching and guiding participants in a class
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="flex gap-4 mb-5">
-              <div className="w-16 h-16 rounded-md self-start bg-slate-200 flex-none" />
-              <div>
-                <div className="mb-2">
-                  <p className="font-semibold">Web Developer</p>
-                  <p>
-                    Jagonya Bisnis - <span> [July 2019 - Dec 2019]</span>
-                  </p>
-                </div>
-                <ul className="list-outside pl-4">
-                  <li className="list-disc">
-                    Build several websites for the governments
-                  </li>
-                  <li className="list-disc">
-                    Presenting the progress/features that we made and share a
-                    blocker/risk if any
-                  </li>
-                  <li className="list-disc">
-                    Discuss the feature that we want to add to the website
-                  </li>
-                  <li className="list-disc">
-                    Work closely with ASN to gather feedback and set the same
-                    expectation about the feature that we build
                   </li>
                 </ul>
               </div>
