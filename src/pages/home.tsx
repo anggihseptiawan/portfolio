@@ -9,12 +9,12 @@ const Home = () => {
   return (
     <>
       <header className="py-8 sm:py-20">
-        {/* <div className="inline-flex p-1 rounded-[3px] gap-2 mb-2 border border-emerald-500">
+        <div className="inline-flex p-1 rounded-[3px] gap-2 mb-2 border border-emerald-500">
           <small className="flex items-center bg-emerald-500 text-white rounded-sm px-2">
             Availability
           </small>
           <small>I am currently open for a new opportunity</small>
-        </div> */}
+        </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-6">
           A Seasoned{" "}
           <span className="text-emerald-500 dark:text-emerald-300">
