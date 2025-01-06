@@ -63,20 +63,23 @@ function About() {
 
                 <ul className="list-outside pl-4">
                   <li className="list-disc">
-                    Code refactor, reduce the code of an apps by ~10% and makes
-                    the code more concise, easy to maintain and scalable
+                    Refactored application code, reducing overall codebase by
+                    ~5%, improving maintainability, scalability, and
+                    readability.
                   </li>
                   <li className="list-disc">
-                    Create a CLI tool to configure what apps to include/exclude
-                    and drop unintended apps and its dependencies so the
-                    monorepo didn't contain unnecessary stuff
+                    Developed a custom CLI tool to streamline app configuration,
+                    enabling the inclusion/exclusion of specific apps and
+                    dependencies, optimizing the monorepo for efficiency.
                   </li>
                   <li className="list-disc">
-                    Responsible to all inquiries (question, bug report, etc)
-                    from client while being an L4
+                    Handled all client inquiries (questions, bug reports, etc.)
+                    as an L4, providing timely and effective solutions.
                   </li>
                   <li className="list-disc">
-                    Develop new feature, bug fix, and doing code review
+                    Contributed to feature development, bug fixes, and code
+                    reviews, ensuring high-quality standards and consistent
+                    project delivery.
                   </li>
                 </ul>
               </div>
@@ -97,25 +100,25 @@ function About() {
 
                 <ul className="list-outside pl-4">
                   <li className="list-disc">
-                    Migrate some web apps from Laravel to React Js
+                    Led the migration of web applications from Laravel to
+                    React.js, enhancing performance and scalability.
                   </li>
                   <li className="list-disc">
-                    Convert the UI Design into a website without skimping the
-                    small details
+                    Transformed UI designs into fully functional websites,
+                    ensuring pixel-perfect implementation and attention to
+                    detail.
                   </li>
                   <li className="list-disc">
-                    Do some research and decide what FE tech stack that we want
-                    to use to build the products
+                    Conducted research and selected the optimal frontend tech
+                    stack, aligning with project goals and future scalability.
                   </li>
                   <li className="list-disc">
-                    Adopt several lib/tools to improve DX (Developer Experience)
+                    Introduced and integrated tools and libraries to improve
+                    developer experience (DX) and streamline workflows.
                   </li>
                   <li className="list-disc">
-                    Distribute the Frontend related task to the team
-                  </li>
-                  <li className="list-disc">
-                    Brainstorm the products with the Product Managers and all
-                    engineers
+                    Managed and delegated frontend tasks within the team,
+                    ensuring efficient collaboration and timely delivery.
                   </li>
                 </ul>
               </div>
@@ -137,13 +140,19 @@ function About() {
                 </div>
                 <ul className="list-outside pl-4">
                   <li className="list-disc">
-                    Build an internal company profile
+                    Developed and launched a compelling company profile,
+                    highlighting the organization's mission, services, and
+                    values to enhance brand visibility and engagement.
                   </li>
                   <li className="list-disc">
-                    Develop a learning curriculum for the frontend class
+                    Designed and implemented a comprehensive frontend
+                    curriculum, equipping participants with essential skills and
+                    practical knowledge in frontend development.
                   </li>
                   <li className="list-disc">
-                    Teaching and guiding participants in a class
+                    Led and mentored a cohort of frontend learners, providing
+                    guidance, support, and feedback to ensure effective skill
+                    acquisition and project success.
                   </li>
                 </ul>
               </div>
@@ -158,44 +167,39 @@ function About() {
 
             <div className="flex flex-wrap gap-3">
               <img
-                src="/javascript.svg"
-                className="w-12 h-12 object-contain rounded-sm"
+                src="/javascript_icon.svg"
+                className="w-12 h-12 object-contain dark:invert rounded-sm"
                 alt="javascript"
               />
               <img
                 src="/react.svg"
-                className="w-12 h-12 object-contain"
+                className="w-12 h-12 object-contain dark:invert"
                 alt="react"
               />
               <img
-                src="/typescript.svg"
-                className="w-12 h-12 object-contain rounded-sm"
+                src="/typescript_icon.svg"
+                className="w-12 h-12 object-contain dark:invert rounded-sm"
                 alt="typscript"
               />
               <img
-                src="/nextjs.svg"
-                className="w-12 h-12 object-contain"
+                src="/nextjs_icon.svg"
+                className="w-12 h-12 object-contain dark:invert"
                 alt="nextjs"
               />
               <img
                 src="/remix.svg"
-                className="w-12 h-12 object-contain"
+                className="w-10 h-10 object-contain dark:invert"
                 alt="remix"
               />
               <img
-                src="/tailwindcss.svg"
-                className="w-12 h-12 object-contain"
+                src="/tailwind_icon.svg"
+                className="w-12 h-12 object-contain dark:invert"
                 alt="tailwindcss"
               />
               <img
-                src="/electron.svg"
-                className="w-12 h-12 object-contain"
+                src="/electron_icon.svg"
+                className="w-12 h-12 object-contain dark:invert"
                 alt="electron"
-              />
-              <img
-                src="/nodejs.svg"
-                className="w-12 h-12 object-contain"
-                alt="nodejs"
               />
             </div>
           </div>
