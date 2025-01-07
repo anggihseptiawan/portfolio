@@ -1,7 +1,7 @@
 function About() {
   return (
     <main className="sm:py-8">
-      <section className="flex flex-col sm:flex-row gap-6 mb-10">
+      <section className="flex flex-col sm:flex-row gap-8 mb-10">
         <div className="sm:w-1/3">
           <img
             src={`${import.meta.env.VITE_HYGRAPH_ASSETS}LPm2RxmSKurpWCHMjtDM`}
@@ -46,7 +46,7 @@ function About() {
         <h3 className="text-xl font-semibold mb-3">Work Experience</h3>
 
         <div className="flex flex-col sm:flex-row gap-6">
-          <div>
+          <div className="w-2/3">
             <div className="flex gap-4 mb-5">
               <img
                 className="w-16 rounded-md self-start"
@@ -159,7 +159,7 @@ function About() {
             </div>
           </div>
 
-          <div>
+          <div className="w-1/3">
             <h3 className="text-xl font-semibold mb-2">Tech Stack</h3>
             <p className="mb-3">
               Here are the tech stack that I am usually use to build things.
@@ -188,7 +188,7 @@ function About() {
               />
               <img
                 src="/remix.svg"
-                className="w-10 h-10 object-contain dark:invert"
+                className="w-12 h-12 object-contain dark:invert"
                 alt="remix"
               />
               <img
