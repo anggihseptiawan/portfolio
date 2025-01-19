@@ -2,6 +2,7 @@ import { useQuery } from "@apollo/client"
 import { Link } from "react-router-dom"
 import { GET_POST } from "../constants/query"
 import { Post } from "../types/post"
+import { projects } from "../constants/projects"
 
 const Home = () => {
   const { loading, error, data } = useQuery(GET_POST)
@@ -68,45 +69,20 @@ const Home = () => {
           </h3>
           <p>Here are some of the projects I build.</p>
           <div className="grid sm:grid-cols-3 gap-3 py-3">
-            <a
-              href="https://screensavior.vercel.app/"
-              className="rounded-md border-4 border-emerald-400"
-              target="_blank"
-              rel="noopener noreferer"
-            >
-              <img
-                src={
-                  import.meta.env.VITE_HYGRAPH_ASSETS + "y4Gf8GsFSuAmdkUxc5mg"
-                }
-                alt="screensavior"
-              />
-            </a>
-            <a
-              href="https://base64-to-image.vercel.app/"
-              className="rounded-md border-4 border-emerald-400"
-              target="_blank"
-              rel="noopener noreferer"
-            >
-              <img
-                src={
-                  import.meta.env.VITE_HYGRAPH_ASSETS + "hvRKWbSiTMWrZss0SM9n"
-                }
-                alt="base64decoder"
-              />
-            </a>
-            <a
-              href="https://flexpdf.vercel.app/"
-              className="rounded-md border-4 border-emerald-400"
-              target="_blank"
-              rel="noopener noreferer"
-            >
-              <img
-                src={
-                  import.meta.env.VITE_HYGRAPH_ASSETS + "pEsD5EWTbenFfZRjuQBQ"
-                }
-                alt="flexpdf"
-              />
-            </a>
+            {projects.slice(0, 3).map((project, idx) => (
+              <a
+                key={idx + project.imageId}
+                href={project.url}
+                className="rounded-md border-4 border-emerald-400"
+                target="_blank"
+                rel="noopener noreferer"
+              >
+                <img
+                  src={import.meta.env.VITE_HYGRAPH_ASSETS + project.imageId}
+                  alt={project.title}
+                />
+              </a>
+            ))}
           </div>
         </section>
 

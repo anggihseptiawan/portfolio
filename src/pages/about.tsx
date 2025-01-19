@@ -1,3 +1,5 @@
+import { works } from "../constants/works"
+
 function About() {
   return (
     <main className="sm:py-8">
@@ -43,123 +45,32 @@ function About() {
       </section>
 
       <section>
-        <h3 className="text-xl font-semibold mb-3">Work Experience</h3>
-
         <div className="flex flex-col sm:flex-row gap-6">
-          <div className="w-2/3">
-            <div className="flex gap-4 mb-5">
-              <img
-                className="w-16 rounded-md self-start"
-                src="/accelbyte.jpeg"
-                alt="accelbyte"
-              />
-              <div>
-                <div className="mb-2">
-                  <p className="font-semibold">Software Engineer - Frontend</p>
-                  <p>
-                    AccelByte - <span>[June 2022 - August 2023]</span>
-                  </p>
+          <div className="w-full sm:w-2/3">
+            <h3 className="text-xl font-semibold mb-3">Work Experience</h3>
+            {works.map((work, idx) => (
+              <div key={idx} className="flex gap-4 mb-5">
+                <img
+                  className="w-16 rounded-md self-start"
+                  src={work.imageUrl}
+                  alt={work.subTitle}
+                />
+                <div>
+                  <div className="mb-2">
+                    <p className="font-semibold">{work.title}</p>
+                    <p>{work.subTitle}</p>
+                  </div>
+                  {work.workItems.map((item, idx) => (
+                    <p key={idx} className="mb-2">
+                      {item.content}
+                    </p>
+                  ))}
                 </div>
-
-                <ul className="list-outside pl-4">
-                  <li className="list-disc">
-                    Refactored application code, reducing overall codebase by
-                    ~5%, improving maintainability, scalability, and
-                    readability.
-                  </li>
-                  <li className="list-disc">
-                    Developed a custom CLI tool to streamline app configuration,
-                    enabling the inclusion/exclusion of specific apps and
-                    dependencies, optimizing the monorepo for efficiency.
-                  </li>
-                  <li className="list-disc">
-                    Handled all client inquiries (questions, bug reports, etc.)
-                    as an L4, providing timely and effective solutions.
-                  </li>
-                  <li className="list-disc">
-                    Contributed to feature development, bug fixes, and code
-                    reviews, ensuring high-quality standards and consistent
-                    project delivery.
-                  </li>
-                </ul>
               </div>
-            </div>
-            <div className="flex gap-4 mb-5">
-              <img
-                className="w-16 rounded-md self-start"
-                src="/kds.jpeg"
-                alt="Klik Digital Sinergi"
-              />
-              <div>
-                <div className="mb-2">
-                  <p className="font-semibold">Frontend Developer</p>
-                  <p>
-                    Klik Digital Sinergi - <span>[Nov 2020 - June 2022]</span>
-                  </p>
-                </div>
-
-                <ul className="list-outside pl-4">
-                  <li className="list-disc">
-                    Led the migration of web applications from Laravel to
-                    React.js, enhancing performance and scalability.
-                  </li>
-                  <li className="list-disc">
-                    Transformed UI designs into fully functional websites,
-                    ensuring pixel-perfect implementation and attention to
-                    detail.
-                  </li>
-                  <li className="list-disc">
-                    Conducted research and selected the optimal frontend tech
-                    stack, aligning with project goals and future scalability.
-                  </li>
-                  <li className="list-disc">
-                    Introduced and integrated tools and libraries to improve
-                    developer experience (DX) and streamline workflows.
-                  </li>
-                  <li className="list-disc">
-                    Managed and delegated frontend tasks within the team,
-                    ensuring efficient collaboration and timely delivery.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="flex gap-4 mb-5">
-              <img
-                className="w-16 rounded-md self-start"
-                src="/armina.jpeg"
-                alt="Arminadaily"
-              />
-
-              <div>
-                <div className="mb-2">
-                  <p className="font-semibold">Frontend Developer</p>
-                  <p>
-                    ARMINAREKA PHARMASIA PRATAMA -
-                    <span> [Feb 2020 - Nov 2020]</span>
-                  </p>
-                </div>
-                <ul className="list-outside pl-4">
-                  <li className="list-disc">
-                    Developed and launched a compelling company profile,
-                    highlighting the organization's mission, services, and
-                    values to enhance brand visibility and engagement.
-                  </li>
-                  <li className="list-disc">
-                    Designed and implemented a comprehensive frontend
-                    curriculum, equipping participants with essential skills and
-                    practical knowledge in frontend development.
-                  </li>
-                  <li className="list-disc">
-                    Led and mentored a cohort of frontend learners, providing
-                    guidance, support, and feedback to ensure effective skill
-                    acquisition and project success.
-                  </li>
-                </ul>
-              </div>
-            </div>
+            ))}
           </div>
 
-          <div className="w-1/3">
+          <div className="w-full sm:w-1/3">
             <h3 className="text-xl font-semibold mb-2">Tech Stack</h3>
             <p className="mb-3">
               Here are the tech stack that I am usually use to build things.
@@ -167,39 +78,54 @@ function About() {
 
             <div className="flex flex-wrap gap-3">
               <img
-                src="/javascript_icon.svg"
-                className="w-12 h-12 object-contain dark:invert rounded-sm"
+                src="/javascript.svg"
+                className="w-12 h-12 object-contain rounded-sm"
                 alt="javascript"
               />
               <img
-                src="/react.svg"
-                className="w-12 h-12 object-contain dark:invert"
-                alt="react"
-              />
-              <img
-                src="/typescript_icon.svg"
-                className="w-12 h-12 object-contain dark:invert rounded-sm"
+                src="/typescript.svg"
+                className="w-12 h-12 object-contain rounded-sm"
                 alt="typscript"
               />
               <img
-                src="/nextjs_icon.svg"
-                className="w-12 h-12 object-contain dark:invert"
+                src="/react.svg"
+                className="w-12 h-12 object-contain"
+                alt="react"
+              />
+              <img
+                src="/nextjs_icon_dark.svg"
+                className="w-12 h-12 object-contain"
                 alt="nextjs"
               />
               <img
+                src="/electron.svg"
+                className="w-12 h-12 object-contain"
+                alt="electron"
+              />
+              <img
                 src="/remix.svg"
-                className="w-12 h-12 object-contain dark:invert"
+                className="w-12 h-12 object-contain"
                 alt="remix"
               />
               <img
-                src="/tailwind_icon.svg"
-                className="w-12 h-12 object-contain dark:invert"
+                src="/tailwindcss.svg"
+                className="w-12 h-12 object-contain"
                 alt="tailwindcss"
               />
               <img
-                src="/electron_icon.svg"
-                className="w-12 h-12 object-contain dark:invert"
-                alt="electron"
+                src="/aws_dark.svg"
+                className="w-12 h-12 object-contain invert dark:invert-0"
+                alt="aws"
+              />
+              <img
+                src="/nodejs.svg"
+                className="w-12 h-12 object-contain"
+                alt="nodejs"
+              />
+              <img
+                src="/vitejs.svg"
+                className="w-12 h-12 object-contain"
+                alt="vitejs"
               />
             </div>
           </div>
