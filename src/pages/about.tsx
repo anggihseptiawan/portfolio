@@ -1,3 +1,4 @@
+import { stacks } from "../constants/stack"
 import { works } from "../constants/works"
 
 function About() {
@@ -72,62 +73,36 @@ function About() {
 
           <div className="w-full sm:w-1/3">
             <h3 className="text-xl font-semibold mb-2">Tech Stack</h3>
-            <p className="mb-3">
-              Here are the tech stack that I am usually use to build things.
+            <p className="mb-4">
+              Here are tools, frameworks, and libraries I've used for building
+              applications:
             </p>
 
-            <div className="flex flex-wrap gap-3">
-              <img
-                src="/javascript.svg"
-                className="w-12 h-12 object-contain rounded-sm"
-                alt="javascript"
-              />
-              <img
-                src="/typescript.svg"
-                className="w-12 h-12 object-contain rounded-sm"
-                alt="typscript"
-              />
-              <img
-                src="/react.svg"
-                className="w-12 h-12 object-contain"
-                alt="react"
-              />
-              <img
-                src="/nextjs_icon_dark.svg"
-                className="w-12 h-12 object-contain"
-                alt="nextjs"
-              />
-              <img
-                src="/electron.svg"
-                className="w-12 h-12 object-contain"
-                alt="electron"
-              />
-              <img
-                src="/remix.svg"
-                className="w-12 h-12 object-contain"
-                alt="remix"
-              />
-              <img
-                src="/tailwindcss.svg"
-                className="w-12 h-12 object-contain"
-                alt="tailwindcss"
-              />
-              <img
-                src="/aws_dark.svg"
-                className="w-12 h-12 object-contain invert dark:invert-0"
-                alt="aws"
-              />
-              <img
-                src="/nodejs.svg"
-                className="w-12 h-12 object-contain"
-                alt="nodejs"
-              />
-              <img
-                src="/vitejs.svg"
-                className="w-12 h-12 object-contain"
-                alt="vitejs"
-              />
+            <div className="flex flex-wrap gap-2 mb-4">
+              {stacks.map((stack, idx) => (
+                <div key={idx} className="bg-transparent/5 p-2 rounded-md">
+                  <img
+                    src={stack.url}
+                    className={`w-12 h-12 object-contain ${
+                      stack.alt === "aws" ? "invert dark:invert-0" : ""
+                    }`}
+                    alt={stack.alt}
+                    title={stack.alt}
+                  />
+                </div>
+              ))}
             </div>
+            <p>
+              Icons By{" "}
+              <a
+                href="https://svgl.app/"
+                className="text-emerald-500"
+                target="_blank"
+                rel="noopener noreferer"
+              >
+                SVGL
+              </a>{" "}
+            </p>
           </div>
         </div>
       </section>
