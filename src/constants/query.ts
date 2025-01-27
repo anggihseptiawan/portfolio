@@ -14,15 +14,22 @@ export const GET_POST = gql`
 `
 
 export const GET_DETAIL_POST = gql`
-  query PostDetail($slug: String!) {
+  query PostDetail(
+    $slug: String!
+    $locales: [Locale!]!
+    $includeCurrent: Boolean!
+  ) {
     post(where: { slug: $slug }) {
       slug
-      title
-      content {
-        markdown
-      }
-      thumbnail {
-        url
+      localizations(locales: $locales, includeCurrent: $includeCurrent) {
+        locale
+        title
+        content {
+          markdown
+        }
+        thumbnail {
+          url
+        }
       }
     }
   }

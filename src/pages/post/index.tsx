@@ -1,32 +1,47 @@
-import { useQuery } from "@apollo/client"
-import { useParams } from "react-router-dom"
-import { GET_DETAIL_POST } from "../../constants/query"
+import { useLoaderData } from "react-router-dom"
 import MarkDown from "react-markdown"
 import rehypeHighlight from "rehype-highlight"
+import rehypeRaw from "rehype-raw"
+import { useState } from "react"
+import { PostDetailLoaderData } from "../../types/post"
 
 export default function Post() {
-  const { slug } = useParams()
-  if (!slug) return
+  const [locale, setLocale] = useState<"id" | "en">("id")
+  const { data, error } = useLoaderData() as {
+    data: PostDetailLoaderData
+    error: boolean
+  }
 
-  const { loading, error, data } = useQuery(GET_DETAIL_POST, {
-    variables: { slug },
-  })
+  const post = data.post.localizations.find((post) => post.locale === locale)
 
-  if (loading) return <p>loading..</p>
   if (error) return <p>Couldn't get blog detail</p>
 
   return (
-    <main className="post sm:py-8 sm:px-24">
-      <h1 className="text-3xl text-center font-bold tracking-tight mb-4">
-        {data.post.title}
+    <main className="prose mx-auto py-8 min-h-screen prose-lg prose-code:!bg-transparent prose-a:text-emerald-500 dark:prose-h1:text-white dark:prose-h3:text-white dark:prose-p:text-white dark:prose-a:text-emerald-300 dark:prose-a:underline">
+      <h1 className="text-2xl md:text-3xl text-center font-bold tracking-tight mb-4">
+        {post?.title}
       </h1>
       <img
-        src={data.post.thumbnail.url}
+        src={post?.thumbnail.url}
         className="w-full sm:h-[450px] object-cover rounded-md mb-6"
-        alt={data.post.slug}
+        alt={data.post?.slug}
       />
-      <MarkDown className="content" rehypePlugins={[rehypeHighlight]}>
-        {data.post.content.markdown.replaceAll("\\", "")}
+      <button
+        className="py-3 px-4 text-sm rounded-md bg-emerald-600 hover:bg-emerald-500 text-white"
+        onClick={() => setLocale((prev) => (prev === "id" ? "en" : "id"))}
+      >
+        {locale === "id"
+          ? "Baca dalam Bahasa Inggris"
+          : "Read in Bahasa Indonesia"}
+      </button>
+      <MarkDown
+        className="content"
+        rehypePlugins={[rehypeHighlight, rehypeRaw]}
+        components={{
+          iframe: ({ ...props }) => <video src={props.src} controls></video>,
+        }}
+      >
+        {post?.content.markdown.replaceAll("\\", "")}
       </MarkDown>
     </main>
   )

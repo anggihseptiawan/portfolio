@@ -81,7 +81,7 @@ export const Navbar = () => {
           Projects
         </NavLink>
         <NavLink
-          to="/posts"
+          to="/post"
           className={({ isActive }) => getActiveClassNav(isActive)}
         >
           Posts

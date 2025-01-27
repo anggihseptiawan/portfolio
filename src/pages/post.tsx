@@ -1,13 +1,13 @@
-import { useQuery } from "@apollo/client"
-import { GET_POST } from "../constants/query"
-import { Post } from "../types/post"
-import { Link } from "react-router-dom"
+import { Post, PostLoaderData } from "../types/post"
+import { Link, useLoaderData } from "react-router-dom"
 
 const Posts = () => {
-  const { loading, error, data } = useQuery(GET_POST)
+  const { data, error } = useLoaderData() as {
+    data: PostLoaderData
+    error: boolean
+  }
 
-  if (loading) return <p>loading..</p>
-  if (error) return <p>Couldn't get blog post</p>
+  if (error) return <p>Couldn't get the list of posts</p>
 
   return (
     <main className="sm:py-8">
